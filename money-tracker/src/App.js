@@ -4,13 +4,15 @@ function App() {
   const [name, setName] = useState({initialState:''});
   const [datetime, setDatetime] = useState({initialState:''});
   const [description, setDescription] = useState({initialState:''});
-  
+  function addNewTransaction() {
+    // call the state and send it to the backend
+  }
   return (
     <main>
       <h1>
         $400<span>.00</span>
       </h1>
-      <form>
+      <form onSubmit= {addNewTransaction}>
         <div className="basic">
           <input type="text" 
           value={name}
