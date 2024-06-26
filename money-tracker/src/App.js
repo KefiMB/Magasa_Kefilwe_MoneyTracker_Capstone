@@ -4,9 +4,16 @@ function App() {
   const [name, setName] = useState({initialState:''});
   const [datetime, setDatetime] = useState({initialState:''});
   const [description, setDescription] = useState({initialState:''});
-  function addNewTransaction() {
-    // call the state and send it to the backend
-  }
+  function addNewTransaction(ev) {
+   const url =process.env.REACT_APP_BACKEND_URL+'/transaction';
+   fetch (url, init { // call the state and send it to the backend
+   method: 'POST',
+   headers: {'Content-type':'application/json'},
+   body: JSON.stringify(value: {name, description, timestamp})
+  })
+
+  )
+}
   return (
     <main>
       <h1>
@@ -26,7 +33,7 @@ function App() {
           <input type="text" 
           vlaue= {description}
           onChange= {ev => setDatetime(ev.target.value)}
-            placeholder={"description"} />
+            placeholder={"Description"} />
         </div>
         <button type="submit">Add new transaction</button>
       </form>
