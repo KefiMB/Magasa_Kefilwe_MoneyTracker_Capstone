@@ -16,7 +16,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "cors-express": "^0.2.2",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
     "express": "^4.19.2",
+    "mongodb": "^6.7.0",
     "mongoose": "^8.4.4"
   }
 }
