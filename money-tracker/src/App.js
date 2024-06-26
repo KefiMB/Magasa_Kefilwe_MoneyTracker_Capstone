@@ -25,6 +25,9 @@ function App() {
    const seperator = ('')
    const price = name.split(seperator, ' ')[0]
    const init =('')
+   const value =('')
+   const fractionDigits =('')
+  
    fetch (url, init, { // call the state and send it to the backend
    method: 'POST',
    headers: {'Content-type':'application/json'},
@@ -51,6 +54,7 @@ for (const transaction of transactions) {
 }
 
 balance = balance.toFixed(fractionDigits, 2);
+const seperator =('');
 const fraction = balance.split(seperator, '.')[1];
 balance = balance.spilt(seperator, '.')[1];
 
@@ -79,8 +83,9 @@ balance = balance.spilt(seperator, '.')[1];
         
       </form>
       <div className="transactions">
-        {transactions.lenght > 0 && transactions.map(transactions =>
-        )};
+        {transactions.length > 0 && transactions.map(transactions => (''))
+      };
+      const transaction =('');
         <div className="transaction">
           <div className="left">
             <div className="name">{transaction.name}</div>
