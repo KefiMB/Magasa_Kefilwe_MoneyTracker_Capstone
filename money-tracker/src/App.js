@@ -6,13 +6,16 @@ function App() {
   const [description, setDescription] = useState({initialState:''});
   function addNewTransaction(ev) {
    const url =process.env.REACT_APP_BACKEND_URL+'/transaction';
-   fetch (url, init { // call the state and send it to the backend
+   fetch (url, init: { // call the state and send it to the backend
    method: 'POST',
    headers: {'Content-type':'application/json'},
-   body: JSON.stringify(value: {name, description, timestamp})
+   body: JSON.stringify (value: {name, description, timestamp})
+  }).then(response => {
+    response.json(.then(json => {
+      console.log('result', json);
+    }))
   })
 
-  )
 }
   return (
     <main>
